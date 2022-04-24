@@ -17,8 +17,9 @@
 <meta property="og:description" content="我们都知道 hexo 作为一个用 node.js 打造的博客框架，能够很好的适配 github，因此也能够很方便的将我们的博客同步到 Github Page 中去，但吹毛求疵的讲，这样还是有一些不利的因素在里面：">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/png/2671851/1650823232757-35ad9b03-e7f9-4791-9709-e6d3e9cda367.png#clientId=u1f4866ea-ec75-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ufe72c502&margin=%5Bobject%20Object%5D&name=%E5%81%A5%E8%BA%AB.PNG&originHeight=1160&originWidth=2263&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=1700936&status=done&style=none&taskId=u99b47cc4-ec75-4aa2-b7f5-0d9f4297e60&title=">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2022/jpeg/2671851/1650824136979-2b8576c1-4b5f-4893-ba84-bfe580c0ab9f.jpeg#clientId=u1f4866ea-ec75-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u34872e74&margin=%5Bobject%20Object%5D&name=%E5%9F%BA%E4%BA%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%BC%BA%E9%99%B7%E9%A2%84%E6%B5%8B%E6%96%B9%E6%B3%95%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B6%E5%9B%BE.jpg&originHeight=769&originWidth=1018&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=56783&status=done&style=none&taskId=u1e1e331e-7948-4643-9ecb-6f917b14ddc&title=">
 <meta property="article:published_time" content="2021-11-02T16:23:47.000Z">
-<meta property="article:modified_time" content="2022-04-24T18:11:13.192Z">
+<meta property="article:modified_time" content="2022-04-24T18:16:30.551Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2022/png/2671851/1650823232757-35ad9b03-e7f9-4791-9709-e6d3e9cda367.png#clientId=u1f4866ea-ec75-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ufe72c502&margin=%5Bobject%20Object%5D&name=%E5%81%A5%E8%BA%AB.PNG&originHeight=1160&originWidth=2263&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=1700936&status=done&style=none&taskId=u99b47cc4-ec75-4aa2-b7f5-0d9f4297e60&title=">
@@ -187,7 +188,7 @@
 <li>希望能够在任何设备上都能够很方便的完成博客内容的更新</li>
 <li>提交方式更为便捷</li>
 </ol>
-<p>故而，本次采用的是<strong>语雀+Github Page+Hexo+腾讯云函数</strong>来完成个人主页的搭建。<br>语雀能够很好的保证我们在不同设备之间的切换，并且可以完美适配 Markdown 语法，因此，这样做的性价比我认为是最高的。测试冻冻的</p>
+<p>故而，本次采用的是<strong>语雀+Github Page+Hexo+腾讯云函数</strong>来完成个人主页的搭建。<br>语雀能够很好的保证我们在不同设备之间的切换，并且可以完美适配 Markdown 语法，因此，这样做的性价比我认为是最高的。</p>
 <h1 id="创建-Github-Page"><a href="#创建-Github-Page" class="headerlink" title="创建 Github Page"></a>创建 Github Page</h1><ol>
 <li>登录自己的 Github</li>
 <li>创建公开项目，项目名字：username.github.io</li>
@@ -232,7 +233,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install yuque-hexo -g</span><br><span class="line">npm install</span><br><span class="line">npm run start</span><br></pre></td></tr></table></figure>
 
 <p>与本地不同的时，这是没有指定 hexo-cli 和 yuque-hexo 版本的，因此执行相应的命令时，hexo-cli 和 yuque-hexo 总会被采用最新的，而 Actions 中的 Node.js 版本是 10.x 版本的，最新的 hexo-cli 需要 12.x 的 Node.js，因此更改一下 Action 脚本中的 Node.js 版本即可，或者可以通过指定 hexo-cli 和 yuque-hexo 版本的方式，同样也可以达到解决该问题的效果。</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/2671851/1650823232757-35ad9b03-e7f9-4791-9709-e6d3e9cda367.png#clientId=u1f4866ea-ec75-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ufe72c502&margin=%5Bobject%20Object%5D&name=%E5%81%A5%E8%BA%AB.PNG&originHeight=1160&originWidth=2263&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=1700936&status=done&style=none&taskId=u99b47cc4-ec75-4aa2-b7f5-0d9f4297e60&title=" alt="健身.PNG"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/2671851/1650823232757-35ad9b03-e7f9-4791-9709-e6d3e9cda367.png#clientId=u1f4866ea-ec75-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=ufe72c502&margin=%5Bobject%20Object%5D&name=%E5%81%A5%E8%BA%AB.PNG&originHeight=1160&originWidth=2263&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=1700936&status=done&style=none&taskId=u99b47cc4-ec75-4aa2-b7f5-0d9f4297e60&title=" alt="健身.PNG"><br><img src="https://cdn.nlark.com/yuque/0/2022/jpeg/2671851/1650824136979-2b8576c1-4b5f-4893-ba84-bfe580c0ab9f.jpeg#clientId=u1f4866ea-ec75-4&crop=0&crop=0&crop=1&crop=1&from=ui&id=u34872e74&margin=%5Bobject%20Object%5D&name=%E5%9F%BA%E4%BA%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%BC%BA%E9%99%B7%E9%A2%84%E6%B5%8B%E6%96%B9%E6%B3%95%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B6%E5%9B%BE.jpg&originHeight=769&originWidth=1018&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=56783&status=done&style=none&taskId=u1e1e331e-7948-4643-9ecb-6f917b14ddc&title=" alt="基于注意力机制的软件缺陷预测方法整体框架图.jpg"></p>
 <h1 id="主要参考"><a href="#主要参考" class="headerlink" title="主要参考"></a>主要参考</h1><p><a target="_blank" rel="noopener" href="https://www.zhwei.cn/hexo-github-actions-yuque/">https://www.zhwei.cn/hexo-github-actions-yuque/</a></p>
 
       
