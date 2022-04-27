@@ -7,30 +7,30 @@
     <meta name="referrer" content="no-referrer" />
 
     
-    <title>[工具篇]IDEA分析及使用--TODO | Monster的博客</title>
+    <title>SQL操作结果集 | Monster的博客</title>
 
-    <meta name="description" content="Monster的博客">
+    <meta name="description" content="&lt;p&gt;SQL 中的联表操作以及求并集、差集、交集">
     <meta name="keywords" content="">
 
     
 
     <meta property="og:locale" content="cn" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content= "[工具篇]IDEA分析及使用--TODO | Monster的博客"  />
-    <meta property="og:description" content= "Monster的博客" />
-    <meta property="og:url" content="http://example.com/2022/04/22/[%E5%B7%A5%E5%85%B7%E7%AF%87]IDEA%E5%88%86%E6%9E%90%E5%8F%8A%E4%BD%BF%E7%94%A8--TODO/index.html" />
+    <meta property="og:title" content= "SQL操作结果集 | Monster的博客"  />
+    <meta property="og:description" content= "&lt;p&gt;SQL 中的联表操作以及求并集、差集、交集" />
+    <meta property="og:url" content="http://example.com/2022/04/27/SQL%E6%93%8D%E4%BD%9C%E7%BB%93%E6%9E%9C%E9%9B%86/index.html" />
     <meta property="og:site_name" content="" />
     <meta property="article:author" content="Monster" />
     <meta property="article:publisher" content="" />
-    <meta property="og:description" content="Monster的博客" />
-    <meta name="twitter:title" content="[工具篇]IDEA分析及使用--TODO | Monster的博客"/>
-    <meta name="twitter:description" content="Monster的博客"/>
+    <meta property="og:description" content="&lt;p&gt;SQL 中的联表操作以及求并集、差集、交集" />
+    <meta name="twitter:title" content="SQL操作结果集 | Monster的博客"/>
+    <meta name="twitter:description" content="&lt;p&gt;SQL 中的联表操作以及求并集、差集、交集"/>
     <script type="application/ld+json">
         {
-            "description": "Monster的博客",
+            "description": "&lt;p&gt;SQL 中的联表操作以及求并集、差集、交集",
             "author": { "@type": "Person", "name": "Monster" },
             "@type": "BlogPosting",
-            "url": "http://example.com/2022/04/22/[%E5%B7%A5%E5%85%B7%E7%AF%87]IDEA%E5%88%86%E6%9E%90%E5%8F%8A%E4%BD%BF%E7%94%A8--TODO/index.html",
+            "url": "http://example.com/2022/04/27/SQL%E6%93%8D%E4%BD%9C%E7%BB%93%E6%9E%9C%E9%9B%86/index.html",
             "publisher": {
             "@type": "Organization",
             "logo": {
@@ -39,11 +39,11 @@
             },
             "name": "Monster"
             },
-            "headline": "[工具篇]IDEA分析及使用--TODO | Monster的博客",
-            "datePublished": "2022-04-21T16:10:28.000Z",
+            "headline": "SQL操作结果集 | Monster的博客",
+            "datePublished": "2022-04-26T16:00:00.000Z",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "http://example.com/2022/04/22/[%E5%B7%A5%E5%85%B7%E7%AF%87]IDEA%E5%88%86%E6%9E%90%E5%8F%8A%E4%BD%BF%E7%94%A8--TODO/index.html"
+                "@id": "http://example.com/2022/04/27/SQL%E6%93%8D%E4%BD%9C%E7%BB%93%E6%9E%9C%E9%9B%86/index.html"
             },
             "@context": "http://schema.org"
         }
@@ -167,7 +167,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl2hkdaat0001daoihdpx0kxy" class="article article-type-post" itemscope
+    <article id="post-cl2hkdaap0000daoi27ld1rrt" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -183,7 +183,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      [工具篇]IDEA分析及使用--TODO
+      SQL操作结果集
     </h1>
   
 
@@ -193,11 +193,19 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2022-04-21T16:10:28.000Z" itemprop="datePublished">2022-04-22</time>
+  <time datetime="2022-04-26T16:00:00.000Z" itemprop="datePublished">2022-04-27</time>
 </div>
 
             
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+            </div>
+            
 
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/" rel="tag">sql</a></li></ul>
+            </div>
             
 
             
@@ -209,7 +217,95 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            
+            <p>SQL 中的联表操作以及求并集、差集、交集<span id="more"></span></p>
+<h1 id="0-需求背景"><a href="#0-需求背景" class="headerlink" title="0. 需求背景"></a>0. 需求背景</h1><p>今天碰到了一个关于 SQL 中的问题，将其简易化之后即可得到这样一个关系：<br><img src="https://cdn.nlark.com/yuque/0/2022/png/2671851/1651027811713-63b4af97-8ffd-4291-8e43-41887d9bd054.png#clientId=u10e2584b-90ed-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=678&id=u614de9a9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=847&originWidth=1036&originalType=binary%E2%88%B6=1&rotation=0&showTitle=false&size=114751&status=done&style=none&taskId=u40bac7a3-1ff9-4726-b54b-f2f152b8056&title=&width=828.8" alt="image.png"><br>即表 A-表 B，表 B-表 C，表 C-表 D，表 A-表 E，表 E-表 F 均为一对多关系，现要查询出表 A 中所有满足日期不早于给定日期的记录，并找出最晚的记录时间，即<strong>A 中记录对应的所有 D 和 F 的记录的日期均需要满足相应的日期条件</strong>。<br>以下是测试所用的数据：</p>
+<pre><code class="sql">insert into table_a VALUES(1, &#39;test_ok_name&#39;),(2, &#39;test_error_name&#39;);
+
+insert into table_b VALUES(1, 1), (2, 1), (3, 2), (4, 2);
+
+insert into table_c VALUES(1, &#39;nameC1&#39;, 1), (2, &#39;nameC2&#39;, 1), (3, &#39;nameC3&#39;, 2), (4, &#39;nameC4&#39;, 2), (5, &#39;nameC5&#39;, 3), (6, &#39;nameC6&#39;, 3), (7, &#39;nameC7&#39;, 4), (8, &#39;nameC8&#39;, 4);
+
+insert into table_d VALUES(1, 1, &#39;2022-4-2&#39;),(2, 1, &#39;2022-4-3&#39;),(3, 2, &#39;2022-4-4&#39;),(4, 2, &#39;2022-4-5&#39;),(5, 3, &#39;2022-4-6&#39;),(6, 3, &#39;2022-4-7&#39;),(7, 4, &#39;2022-4-8&#39;),(8, 4, &#39;2022-4-9&#39;),
+                                                  (9, 5, &#39;2022-4-3&#39;),(10, 5, &#39;2022-4-4&#39;),(11, 6, &#39;2022-4-5&#39;),(12, 6, &#39;2022-4-6&#39;),(13, 7, &#39;2022-4-7&#39;),(14, 7, &#39;2022-4-8&#39;),(15, 8, &#39;2022-4-9&#39;),(16, 8, &#39;2022-4-10&#39;);
+
+insert into table_e VALUES(1, 1, &#39;nameE1&#39;), (2, 1, &#39;nameE2&#39;), (3, 2, &#39;nameE3&#39;), (4, 2, &#39;nameE4&#39;);
+
+insert into table_f VALUES(1, 1, &#39;2022-4-2&#39;),(2, 1, &#39;2022-4-3&#39;),(3, 2, &#39;2022-4-4&#39;),(4, 2, &#39;2022-4-5&#39;),
+                                                  (5, 3, &#39;2022-4-3&#39;),(6, 3, &#39;2022-4-4&#39;),(7, 4, &#39;2022-4-5&#39;),(8, 4, &#39;2022-4-6&#39;);
+</code></pre>
+<p>当我们需要求最晚记录时间为 2022-04-09 的 table_a 的记录，那么按照数据来说我们应该只求出 name 为 task_ok_name 的记录</p>
+<h1 id="1-解决和分析"><a href="#1-解决和分析" class="headerlink" title="1. 解决和分析"></a>1. 解决和分析</h1><p>首先，这是一个典型的求数据库交集的问题，由于其中的关系均为一对多关系，因此，可以将表 A、B、C、D 联立起来，并把表 A、E、F 联立起来，求笛卡尔积，然后通过 HAVING 的方式进行筛选：</p>
+<pre><code class="sql">SELECT a.a_id from table_a a, table_b b, table_c c,table_d d
+  where a.a_id = b.a_id and
+        b.b_id = c.b_id and
+        c.c_id = d.c_id
+  GROUP BY a.a_id HAVING MAX(d.d_date) &lt;= &#39;2022-4-9&#39;;
+</code></pre>
+<pre><code class="sql">SELECT a.a_id from table_a a, table_e e, table_f f
+  where a.a_id = e.a_id and
+        e.e_id = f.e_id
+  GROUP BY a.a_id HAVING MAX(f.f_date) &lt;= &#39;2022-4-9&#39;;
+</code></pre>
+<p>再将两者求交集（注意：MySQL 中并没有 INTERSECT 关键字，因此不能用这个求交集，采用 inner join 的方式求交集）：</p>
+<pre><code class="sql">SELECT t1.a_id from
+  (SELECT a.a_id from table_a a, table_b b, table_c c,table_d d
+     where a.a_id = b.a_id and
+           b.b_id = c.b_id and
+           c.c_id = d.c_id
+     GROUP BY a.a_id HAVING MAX(d.d_date) &lt;= &#39;2022-4-9&#39;) t1
+  INNER JOIN
+  (SELECT a.a_id from table_a a, table_e e, table_f f
+     where a.a_id = e.a_id and
+           e.e_id = f.e_id
+     GROUP BY a.a_id HAVING MAX(f.f_date) &lt;= &#39;2022-4-9&#39;) t2
+  on t1.a_id = t2.a_id;
+</code></pre>
+<h1 id="2-总结"><a href="#2-总结" class="headerlink" title="2. 总结"></a>2. 总结</h1><h2 id="2-1-SQL-求交集"><a href="#2-1-SQL-求交集" class="headerlink" title="2.1 SQL 求交集"></a>2.1 SQL 求交集</h2><pre><code class="sql">SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+
+INTERSECT
+
+SELECT column1 [, column2 ]
+FROM table1 [, table2 ]
+[WHERE condition]
+</code></pre>
+<p>MySQL 不支持 INTERSECT 语句，因此一般采用 INNER JOIN 的方式来求交集：</p>
+<pre><code class="sql">SELECT DISTINCT
+   id
+FROM t1
+   INNER JOIN t2 USING(id);
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>INNER JOIN 子句从左表和右表返回所有符合条件的行记录。</li>
+<li>DISTINCT 运算符删除重复行。</li>
+</ul>
+<h2 id="2-2-SQL-求并集"><a href="#2-2-SQL-求并集" class="headerlink" title="2.2 SQL 求并集"></a>2.2 SQL 求并集</h2><pre><code class="sql">-- UNION、UNION ALL能对两个或以上的结果集进行合并
+-- 不包括重复行，进行默认排序
+select a.id, a.name from tableA a
+UNION
+select b.id, b.name from tableB b
+
+-- 包括重复行，不进行默认排序
+select a.id, a.name from tableA a
+UNION ALL
+select b.id, b.name from tableB b
+</code></pre>
+<h2 id="2-3-SQL-求差集"><a href="#2-3-SQL-求差集" class="headerlink" title="2.3 SQL 求差集"></a>2.3 SQL 求差集</h2><pre><code class="sql">select a.id, a.name from tableA a
+MINUS
+select b.id, b.name from tableB b
+</code></pre>
+<p>同样，MySQL 并不支持差集 MINUS 关键字，因此，通常有两种做法：</p>
+<ol>
+<li>采用 not in 的方式（效率太差，数据较大时容易出现死机的情况）</li>
+<li>采用左连接 left join 的方式（如下，从 tableA 中剔除 tableB 中的数据）</li>
+</ol>
+<pre><code class="sql">select id from tableA a left join
+(select id as tmp_id from tableB ) as b
+on a.id = b.tmp_id where b.tmp_id is not NULL;
+</code></pre>
+
         </div>
 
     </div>
@@ -233,15 +329,11 @@
     
 <nav class="article-nav">
   
-    <a href="/2022/04/22/%5B%E8%A1%8C%E4%B8%9A%E8%B0%83%E7%A0%94%5D%E5%9B%BD%E4%BA%A7%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E8%B0%83%E7%A0%94--TODO/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-caption">下一篇</div>
-      <div class="article-nav-title">
-        
-          [行业调研]国产开发环境调研--TODO
-        
-      </div>
-    </a>
   
+    <a href="/2022/04/25/%E6%89%93%E9%80%A0Github%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">打造Github个人主页博客</div>
+    </a>
   
 </nav>
 
@@ -249,15 +341,15 @@
     <section class="share">
         <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=[工具篇]IDEA分析及使用--TODO - Monster的博客&url=http://example.com/2022/04/22/[%E5%B7%A5%E5%85%B7%E7%AF%87]IDEA%E5%88%86%E6%9E%90%E5%8F%8A%E4%BD%BF%E7%94%A8--TODO/">
+            href="https://twitter.com/share?text=SQL操作结果集 - Monster的博客&url=http://example.com/2022/04/27/SQL%E6%93%8D%E4%BD%9C%E7%BB%93%E6%9E%9C%E9%9B%86/">
             <box-icon type='logo' name='twitter'></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=[工具篇]IDEA分析及使用--TODO - Monster的博客&u=http://example.com/2022/04/22/[%E5%B7%A5%E5%85%B7%E7%AF%87]IDEA%E5%88%86%E6%9E%90%E5%8F%8A%E4%BD%BF%E7%94%A8--TODO/">
+            href="https://www.facebook.com/sharer.php?title=SQL操作结果集 - Monster的博客&u=http://example.com/2022/04/27/SQL%E6%93%8D%E4%BD%9C%E7%BB%93%E6%9E%9C%E9%9B%86/">
             <box-icon name='facebook-square' type='logo' ></box-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=[工具篇]IDEA分析及使用--TODO - Monster的博客&url=http://example.com/2022/04/22/[%E5%B7%A5%E5%85%B7%E7%AF%87]IDEA%E5%88%86%E6%9E%90%E5%8F%8A%E4%BD%BF%E7%94%A8--TODO/&pic=">
+            href="https://service.weibo.com/share/share.php?title=SQL操作结果集 - Monster的博客&url=http://example.com/2022/04/27/SQL%E6%93%8D%E4%BD%9C%E7%BB%93%E6%9E%9C%E9%9B%86/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>
